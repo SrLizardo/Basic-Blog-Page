@@ -1,0 +1,22 @@
+import sqlite3
+from werkzeug.security import generate_password_hash
+connection = sqlite3.connect("SQLite.db", check_same_thread=False)
+cursor = connection.cursor()
+
+cursor.execute('''CREATE TABLE user (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL
+);''')
+
+
+cursor.execute('ALTER TABLE post ADD author_id INTEGER;')
+
+cursor.execute('INSERT INTO user (id, username, email, password_hash) VALUES (?, ?, ?, ?)',
+               (1, 'Rocket', 'rocket@example.com', generate_password_hash('password')))
+
+cursor.execute('UPDATE post SET author_id = 1;')
+
+connection.commit()
+connection.close()

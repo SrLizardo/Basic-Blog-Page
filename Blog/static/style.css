@@ -1,0 +1,148 @@
+body {
+   font-family: 'Courier New', monospace;
+   background-color: #282c34;
+   color: #eee;
+   line-height: 1.6;
+}
+
+
+.blog {
+   margin: auto;
+   max-width: 800px;
+}
+
+
+h1 {
+   font-size: 50px;
+   font-weight: 300;
+   color: #ff7f50;
+   text-align: center;
+}
+
+
+.card {
+   padding: 20px;
+   margin-bottom: 30px;
+   background-color: #343a40;
+   text-align: center;
+   border-radius: 10px;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+a {
+ text-decoration: none;
+ color: #ff7f50;
+}
+
+nav a {
+  color: #ff7f50;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff7f50;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1c1f24;
+  color: #aaa;
+  margin-top: 40px;
+}
+
+nav {
+  background: #1c1f24;
+  padding: 10px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav a {
+  color: #ff7f50;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #fff;
+}
+
+form {
+  background-color: #1c1f24;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-width: 500px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #343a40;
+  color: #ff7f50;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post{
+    max-width: 800px;
+    margin: auto;
+}
+
+.author{
+    color: gray;
+    text-align: right;
+}
+
+.like-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.2s;
+}
+
+.like-btn:hover {
+    transform: scale(1.1);
+}
+
+
